@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact - My Portfolio{% endblock %}
+{% block content %}
+<h2>Contact Me</h2>
+{% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-alert">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+<form method="POST" novalidate>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+<script>
+  setTimeout(function () {
+    const alert = document.getElementById('success-alert');
+    if (alert) {
+      alert.classList.remove('show');
+      alert.classList.add('fade');
+      setTimeout(() => alert.remove(), 500); // remove from DOM after fade
+    }
+  }, 3000); // fades out after 3 seconds
+</script>
+
+{% endblock %}

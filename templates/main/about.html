@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About - My Portfolio{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-4 text-center">
+    <img src="{% static 'img/profile.jpg' %}" class="rounded-circle img-fluid mb-3" alt="Profile Picture">
+  </div>
+  <div class="col-md-8">
+    <h2>About Me</h2>
+    <p>Hello! I'm Priyam — a web developer who loves building clean, functional websites and apps. I enjoy working with Django, Python, HTML, CSS, and Bootstrap.</p>
+    <h4 class="mt-4">Skills:</h4>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Python & Django</li>
+      <li class="list-group-item">HTML, CSS & Bootstrap</li>
+      <li class="list-group-item">JavaScript & Git</li>
+      <li class="list-group-item">Problem Solving & Algorithms</li>
+        <li class="list-group-item">RESTful APIs</li>
+        <li class="list-group-item">MongoDB MySQL</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
