@@ -1,34 +1,28 @@
 {% extends 'base.html' %}
-{% block title %}Projects - My Portfolio{% endblock %}
+{% load static %}
+{% block title %}Projects - Priyam{% endblock %}
+
 {% block content %}
 <h2 class="mb-4">My Projects</h2>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Portfolio Website</h5>
-        <p class="card-text">This is the site you're currently viewing — built using Django and Bootstrap.</p>
-        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+
+<div class="row">
+  {% for project in projects %}
+    <div class="col-md-6 col-lg-4 mb-4 slide-in">
+      <div class="card h-100 shadow-sm">
+        {% if project.image %}
+          <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
+          {% if project.link %}
+            <a href="{{ project.link }}" class="btn btn-primary" target="_blank">View</a>
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Blog App</h5>
-        <p class="card-text">A full-featured blog with posts, categories, and comments using Django.</p>
-        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Task Tracker</h5>
-        <p class="card-text">Track your daily tasks using JavaScript and local storage.</p>
-        <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
-      </div>
-    </div>
-  </div>
+  {% empty %}
+    <p>No projects yet.</p>
+  {% endfor %}
 </div>
 {% endblock %}

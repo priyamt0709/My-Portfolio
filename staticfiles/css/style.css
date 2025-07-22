@@ -40,3 +40,8 @@ body {
   color: #007bff;
   line-height: 2.2rem;
 }
+
+.rounded-circle {
+  object-fit: cover;
+  border: 4px solid #fff;
+}

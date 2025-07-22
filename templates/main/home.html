@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Home - Priyam{% endblock %}
 {% block content %}
 
-<div class="text-center py-5">
-  <h1 class="display-4">Welcome to My Portfolio</h1>
-  <div id="typewriter-container" class="mt-4"></div>
+<div class="text-center py-5 slide-in">
+  <img src="{% static 'img/priyam.jpg' %}" alt="Priyam" class="rounded-circle shadow mb-4" width="150" height="150">
+
+  <h1 class="display-5 fw-bold animate-fade-in mb-3">👋 Hello, I'm Priyam</h1>
+
+  <div id="typewriter-container" class="text-primary mb-4"></div>
+
+  <a href="{% url 'projects' %}" class="btn btn-outline-primary btn-lg">View My Projects</a>
 </div>
 
 {% endblock %}
