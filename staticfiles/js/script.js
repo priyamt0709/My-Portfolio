@@ -1,3 +1,4 @@
+console.log("✔ script.js loaded from Render");
 document.addEventListener('DOMContentLoaded', () => {
   // ✅ Fade out success messages after 3 seconds
   const alert = document.getElementById("success-alert");

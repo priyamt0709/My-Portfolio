@@ -19,3 +19,4 @@ sqlparse==0.5.3
 tzdata==2024.2
 urllib3==1.26.20
 Werkzeug==2.0.3
+whitenoise==6.9.0
