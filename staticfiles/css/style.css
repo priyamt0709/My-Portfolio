@@ -1,38 +1,42 @@
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* ✅ Fade in animation (can be used for page load) */
 .animate-fade-in {
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
+/* ✅ Message fade out after 3s */
 .message {
   transition: opacity 1s ease;
 }
-
 .fade-out {
   opacity: 0;
 }
-#typewriter {
-  font-size: 1.8rem;
-  font-weight: 600;
-  min-height: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid #007bff;
+
+/* ✅ Slide-in elements (e.g., headings, forms) */
+.slide-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
 }
-#typewriter-container {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #007bff;
-  min-height: 100px;
-  white-space: pre-wrap;
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* ✅ Typewriter effect container */
+#typewriter-container {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #007bff;
+  line-height: 2.2rem;
+}
