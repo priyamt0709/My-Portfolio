@@ -12,6 +12,7 @@ def projects(request):
     return render(request, 'main/projects.html')
 
 def contact(request):
+    print("✅ Contact view is working")
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
