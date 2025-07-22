@@ -1,4 +1,19 @@
-  // ✅ Fixed Typewriter (line-by-line, clean & correct)
+document.addEventListener('DOMContentLoaded', () => {
+  // ✅ Fade out success messages
+  const alert = document.getElementById("success-alert");
+  if (alert) {
+    setTimeout(() => {
+      alert.classList.add("fade-out");
+      setTimeout(() => alert.remove(), 500);
+    }, 3000);
+  }
+
+  // ✅ Slide-in animation
+  document.querySelectorAll('.slide-in').forEach((el) => {
+    el.classList.add('visible');
+  });
+
+  // ✅ Typewriter animation (only runs if container exists)
   const lines = [
     "I am Priyam Tiwari.",
     "A Django Developer.",
@@ -7,6 +22,7 @@
   ];
 
   const container = document.getElementById("typewriter-container");
+  if (!container) return;  // 🛑 Stop if container not found
 
   let lineIndex = 0;
   let charIndex = 0;
@@ -34,3 +50,4 @@
   }
 
   typeNextChar();
+});
