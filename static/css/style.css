@@ -7,6 +7,7 @@ body {
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -145,3 +146,39 @@ footer a:hover {
   border-top-right-radius: 0.75rem;
 }
 
+/* 🌙 Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar,
+.dark-mode footer {
+  background-color: #1f1f1f !important;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.dark-mode .btn-outline-primary {
+  color: #fff;
+  border-color: #fff;
+}
+
+.dark-mode .btn-outline-primary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode .form-control {
+  background-color: #222;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #ccc;
+}
