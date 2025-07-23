@@ -1,16 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Home - Priyam{% endblock %}
+
 {% block content %}
+<!-- 🌟 Hero Section with Animation -->
+<section class="hero-section text-center text-white py-5 slide-in" style="background: linear-gradient(to right, #0d6efd, #6610f2); border-radius: 1rem;">
+  
+  <img src="{% static 'img/priyam.jpg' %}" alt="Priyam" class="rounded-circle shadow mb-4 animate-fade-in" width="150" height="150">
 
-<div class="text-center py-5 slide-in">
-  <img src="{% static 'img/priyam.jpg' %}" alt="Priyam" class="rounded-circle shadow mb-4" width="150" height="150">
+  <h1 class="display-5 fw-bold animate-fade-in mb-3">
+    👋 Hello, I'm <span class="text-warning">Priyam</span>
+  </h1>
 
-  <h1 class="display-5 fw-bold animate-fade-in mb-3">👋 Hello, I'm Priyam</h1>
+  <!-- ✨ Typewriter effect with fade -->
+  <div id="typewriter-container" class="animate-fade-in mb-4"></div>
 
-  <div id="typewriter-container" class="text-primary mb-4"></div>
+  <a href="{% url 'projects' %}" class="btn btn-outline-light btn-lg animate-fade-in mt-2">
+    View My Projects <i class="bi bi-box-arrow-up-right ms-2"></i>
+  </a>
 
-  <a href="{% url 'projects' %}" class="btn btn-outline-primary btn-lg">View My Projects</a>
-</div>
+</section>
 
+<!-- Add spacing below -->
+<div class="my-5"></div>
 {% endblock %}

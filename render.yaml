@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn portfolio_project.wsgi:application"
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        value: django-insecure-2cey53w)3xn7*!87a1+&gc2wrdh3!$y4(oz-%q#2&47hx#9s_c
+    staticPublishPath: staticfiles

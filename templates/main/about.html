@@ -1,23 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}About - My Portfolio{% endblock %}
+
 {% block content %}
-<div class="row">
-  <div class="col-md-4 text-center">
-    <img src="{% static 'img/profile.jpg' %}" class="rounded-circle img-fluid mb-3" alt="Profile Picture">
+<!-- 👤 Intro + Profile -->
+<div class="row align-items-center slide-in mb-5">
+  <div class="col-md-4 text-center mb-4">
+    <img src="{% static 'img/profile.jpg' %}" class="rounded-circle img-fluid shadow" alt="Profile Picture" width="180" height="180">
+    <h3 class="mt-3 fw-semibold">Priyam Tiwari</h3>
+    <p class="text-muted">Python & Software Developer</p>
   </div>
+
   <div class="col-md-8">
-    <h2>About Me</h2>
-    <p>Hello! I'm Priyam — a web developer who loves building clean, functional websites and apps. I enjoy working with Django, Python, HTML, CSS, and Bootstrap.</p>
-    <h4 class="mt-4">Skills:</h4>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Python & Django</li>
-      <li class="list-group-item">HTML, CSS & Bootstrap</li>
-      <li class="list-group-item">JavaScript & Git</li>
-      <li class="list-group-item">Problem Solving & Algorithms</li>
-        <li class="list-group-item">RESTful APIs</li>
-        <li class="list-group-item">MongoDB MySQL</li>
-    </ul>
+    <h2 class="mb-3">About Me</h2>
+    <p>
+      Hello! I'm <strong>Priyam</strong> — a passionate developer who loves creating clean and functional web applications.
+      I specialize in <strong>Django</strong>, <strong>Python</strong>, and modern front-end technologies.
+    </p>
+    <p>
+      With a strong foundation in computer science and hands-on experience from various projects, I aim to build scalable and efficient software solutions. I’m constantly learning and refining my skills to stay ahead in the tech landscape.
+    </p>
+    <p>
+      As a backend-focused developer, I enjoy crafting <strong>RESTful APIs</strong>, designing secure authentication systems, and writing maintainable, elegant code. My experience includes working with databases like <strong>PostgreSQL</strong> and deploying applications using <strong>Docker</strong> and <strong>Heroku</strong>.
+    </p>
+    <p>
+      🤝 Whether it's collaborating in Agile teams or building solo side projects, I’m driven by curiosity and purpose. I enjoy contributing to open-source projects and always strive to write code that improves real-life problems — one feature at a time.
+    </p>
   </div>
+</div>
+
+<!-- 📜 Education & Experience Timeline -->
+<div class="slide-in">
+  <h4 class="mb-4">Education & Experience</h4>
+  <ul class="timeline">
+    <li>
+      <strong>B.Tech in Computer Science Engineering</strong> <br>
+      <span class="text-muted">2022 – 2025, Maharana Pratap Group of Institutions, Kanpur</span>
+    </li>
+    <li>
+      <strong>Diploma in Computer Science Engineering</strong> <br>
+      <span class="text-muted">2019 – 2022, Mahatma Jyotiba Phule Government Polytechnic, Kanpur</span>
+    </li>
+  </ul>
 </div>
 {% endblock %}

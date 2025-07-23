@@ -10,7 +10,8 @@ def about(request):
     return render(request, 'main/about.html')
 
 def projects(request):
-    return render(request, 'main/projects.html')
+    all_projects = Project.objects.all()
+    return render(request, 'main/projects.html', {'projects': all_projects})
 
 def contact(request):
     if request.method == 'POST':
